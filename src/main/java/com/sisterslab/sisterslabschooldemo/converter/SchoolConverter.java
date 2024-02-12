@@ -1,7 +1,7 @@
 package com.sisterslab.sisterslabschooldemo.converter;
 
 import com.sisterslab.sisterslabschooldemo.dto.request.SchoolRequest;
-import com.sisterslab.sisterslabschooldemo.dto.response.SchoolCreateResponse;
+import com.sisterslab.sisterslabschooldemo.dto.response.SchoolResponse;
 import com.sisterslab.sisterslabschooldemo.model.School;
 import lombok.experimental.UtilityClass;
 
@@ -13,10 +13,10 @@ public class SchoolConverter {
         return school;
     }
 
-    public static SchoolCreateResponse convertToSchoolCreateResponse(School school) {
-        SchoolCreateResponse schoolCreateResponse = new SchoolCreateResponse();
-        schoolCreateResponse.setCreatedDate(school.getCreatedDate());
-        schoolCreateResponse.setSchoolName(school.getSchoolName());
-        return schoolCreateResponse;
+    public static SchoolResponse convertToSchoolResponse(School school) {
+        SchoolResponse schoolResponse = new SchoolResponse();
+        schoolResponse.setCreatedDate(school.getCreatedDate());
+        schoolResponse.setSchoolName(school.getSchoolName());
+        return schoolResponse;
     }
 }
